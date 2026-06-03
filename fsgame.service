@@ -1,0 +1,11 @@
+[Unit]
+Description=fsgame – keep game windows above the panel
+After=graphical-session.target
+
+[Service]
+ExecStart=%h/.local/bin/fsgame
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=graphical-session.target

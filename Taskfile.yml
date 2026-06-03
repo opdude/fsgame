@@ -1,0 +1,21 @@
+version: '3'
+
+tasks:
+  default:
+    cmds:
+      - task: install
+
+  install:
+    desc: Install fsgame and start the service
+    cmds:
+      - sh install.sh
+
+  uninstall:
+    desc: Stop and remove fsgame
+    cmds:
+      - sh uninstall.sh
+
+  status:
+    desc: Show fsgame service status
+    cmds:
+      - systemctl --user status fsgame.service
